@@ -1,28 +1,24 @@
 extends KinematicBody
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
+#exports to configure movement
 export var moveSpeed : float = 10
 export var acceleration : float = 20
 export var gravity : float = 9
 export var mouseSensitivity: float = 0.1
 export var jumpSpeed : float = 4
+#movement variables
 onready var direction = Vector3.ZERO
 onready var velocity = Vector3.ZERO
 onready var fall = Vector3.ZERO
-
-
+#child nodes needed
 onready var head = $Head
+onready var loadout = $Head/Loadout
 
-func _ready():
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta:float) -> void:
+	
 	movement(delta)
 
 func movement(delta):

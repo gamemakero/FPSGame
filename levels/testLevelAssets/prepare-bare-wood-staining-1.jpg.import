@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/prepare-bare-wood-staining-1.jpg-63c6019e92938b3ddade5d9f02d6c262.s3tc.stex"
-path.etc2="res://.import/prepare-bare-wood-staining-1.jpg-63c6019e92938b3ddade5d9f02d6c262.etc2.stex"
+path.s3tc="res://.import/prepare-bare-wood-staining-1.jpg-0668e077c65ca9be9ca52a8736970877.s3tc.stex"
+path.etc2="res://.import/prepare-bare-wood-staining-1.jpg-0668e077c65ca9be9ca52a8736970877.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://levels/test_level_assets/prepare-bare-wood-staining-1.jpg"
-dest_files=[ "res://.import/prepare-bare-wood-staining-1.jpg-63c6019e92938b3ddade5d9f02d6c262.s3tc.stex", "res://.import/prepare-bare-wood-staining-1.jpg-63c6019e92938b3ddade5d9f02d6c262.etc2.stex" ]
+source_file="res://levels/testLevelAssets/prepare-bare-wood-staining-1.jpg"
+dest_files=[ "res://.import/prepare-bare-wood-staining-1.jpg-0668e077c65ca9be9ca52a8736970877.s3tc.stex", "res://.import/prepare-bare-wood-staining-1.jpg-0668e077c65ca9be9ca52a8736970877.etc2.stex" ]
 
 [params]
 

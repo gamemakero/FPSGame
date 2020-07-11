@@ -17,11 +17,13 @@ script = ExtResource( 3 )
 [node name="Camera" type="Camera" parent="Head"]
 fov = 36.0614
 
-[node name="gun" parent="Head" instance=ExtResource( 2 )]
+[node name="Loadout" type="Spatial" parent="Head"]
+
+[node name="gun" parent="Head/Loadout" instance=ExtResource( 2 )]
 transform = Transform( -0.0340445, 0, 0.0940264, 0, 0.1, 0, -0.0940264, 0, -0.0340445, 0.31538, -0.326253, -0.965 )
 
 [node name="Stats" parent="." instance=ExtResource( 1 )]
 
 [node name="Collision" type="CollisionShape" parent="."]
-transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, -0.356684, 0 )
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 0, -0.356684, -0.625416 )
 shape = SubResource( 1 )

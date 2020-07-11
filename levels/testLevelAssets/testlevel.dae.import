@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/testlevel.dae-1962affadc5b5e9a6e0e170b9af0f9d2.scn"
+path="res://.import/testlevel.dae-d49810ab2f78e18c634cfc1e7d206060.scn"
 
 [deps]
 
-source_file="res://levels/test_level_assets/testlevel.dae"
-dest_files=[ "res://.import/testlevel.dae-1962affadc5b5e9a6e0e170b9af0f9d2.scn" ]
+source_file="res://levels/testLevelAssets/testlevel.dae"
+dest_files=[ "res://.import/testlevel.dae-d49810ab2f78e18c634cfc1e7d206060.scn" ]
 
 [params]
 
