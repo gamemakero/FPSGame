@@ -1,5 +1,8 @@
 extends Area
 
-signal damageRecieved
-func bulletCollisioned():
-    emit_signal("damageRecieved")
+
+signal damageRecieved(damage)
+
+
+func bulletCollisioned(baseDamage: int):
+	emit_signal("damageRecieved", baseDamage)

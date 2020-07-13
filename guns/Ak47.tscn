@@ -7,7 +7,7 @@
 transform = Transform( -0.000993048, 0.0499901, -8.14443e-09, 0, -8.14603e-09, -0.05, -0.0499901, -0.000993048, 1.61788e-10, -0.333, -0.221479, 1.19369 )
 
 [node name="gunSkel" parent="." instance=ExtResource( 2 )]
-baseDamage = 1
+baseDamage = 3
 magazineSize = 30
 
 [node name="BulletHole" parent="gunSkel" index="0"]

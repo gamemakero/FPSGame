@@ -56,7 +56,7 @@ func shootRay():
 		print("Ray is colliding")
 		var body = ray.get_collider()
 		if body.has_method("bulletCollisioned"):
-			body.bulletCollisioned()
+			body.bulletCollisioned(baseDamage)
 			ray.queue_free()
 		else:
 			#ray.queue_free()
