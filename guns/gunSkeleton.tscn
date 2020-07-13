@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://guns/gunSkeleton.gd" type="Script" id=4]
+
+[node name="gunSkel" type="Spatial"]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0 )
+script = ExtResource( 4 )
+
+[node name="BulletHole" type="Spatial" parent="."]
+
+[node name="FireRate" type="Timer" parent="."]
+process_mode = 0
+wait_time = 0.5
+
+[node name="Reload" type="Timer" parent="."]
+process_mode = 0
+[connection signal="timeout" from="FireRate" to="." method="fireRateTimeOut"]
+[connection signal="timeout" from="Reload" to="." method="onReloadTimeout"]

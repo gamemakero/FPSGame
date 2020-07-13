@@ -1,23 +1,28 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://guns/Assets/bulletMaterial.material" type="Material" id=1]
-[ext_resource path="res://guns/Assets/bullet.glb" type="PackedScene" id=2]
+[ext_resource path="res://guns/Bullet.gd" type="Script" id=3]
 [ext_resource path="res://Hitbox/Hitbox.tscn" type="PackedScene" id=4]
 
-[sub_resource type="CylinderShape" id=1]
-radius = 0.19737
-height = 0.439926
+[sub_resource type="SphereMesh" id=1]
+material = ExtResource( 1 )
 
-[node name="Bullet" instance=ExtResource( 2 )]
+[sub_resource type="SphereShape" id=2]
 
-[node name="Cone" parent="." index="0"]
-material/0 = ExtResource( 1 )
+[node name="Bullet" type="Spatial"]
+script = ExtResource( 3 )
+__meta__ = {
+"_editor_description_": ""
+}
+bulletSpeed = 500.0
 
-[node name="Hitbox" parent="." index="1" instance=ExtResource( 4 )]
-collision_mask = 2147483665
+[node name="MeshInstance" type="MeshInstance" parent="."]
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="Hitbox" parent="." instance=ExtResource( 4 )]
 
 [node name="CollisionShape" parent="Hitbox" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000717282, 0.22782, 0.000631094 )
-shape = SubResource( 1 )
+shape = SubResource( 2 )
 
 [editable path="Hitbox"]

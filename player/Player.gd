@@ -11,15 +11,22 @@ onready var direction = Vector3.ZERO
 onready var velocity = Vector3.ZERO
 onready var fall = Vector3.ZERO
 #child nodes needed
-onready var head = $Head
-onready var loadout = $Head/Loadout
+var head
+var loadout
+
+func _ready():
+	head = $Head
+	loadout = $Head/Loadout
+	var iniGun = load("res://guns/Ak47.tscn")
+	loadout.equipGun(iniGun)
 
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta:float) -> void:
-	
 	movement(delta)
+	checkAndShoot()
+
 
 func movement(delta):
 	direction = Vector3()
@@ -40,8 +47,16 @@ func movement(delta):
 	velocity = move_and_slide(velocity, Vector3.UP)
 	fall = move_and_slide(fall,Vector3.UP)
 
+
 func _input(event):
 	if event is InputEventMouseMotion:
 		rotate_y(deg2rad(-event.relative.x * mouseSensitivity))
 		head.rotate_x(deg2rad(-event.relative.y * mouseSensitivity))
 		head.rotation.x = clamp(head.rotation.x,deg2rad(-90),deg2rad(90))
+
+
+func checkAndShoot():
+	if Input.is_action_pressed("Shoot"):
+		var gun = loadout.currentGun.get_node("gunSkel")
+		gun.shoot()
+	

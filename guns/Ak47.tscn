@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://guns/Assets/AK47/ak47_model.tscn" type="PackedScene" id=1]
+[ext_resource path="res://guns/gunSkeleton.tscn" type="PackedScene" id=2]
+
+[node name="gun" type="Spatial"]
+transform = Transform( -0.000993048, 0.0499901, -8.14443e-09, 0, -8.14603e-09, -0.05, -0.0499901, -0.000993048, 1.61788e-10, -0.333, -0.221479, 1.19369 )
+
+[node name="gunSkel" parent="." instance=ExtResource( 2 )]
+baseDamage = 1
+magazineSize = 30
+
+[node name="BulletHole" parent="gunSkel" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 119.786, 15.0873, -6.65384 )
+
+[node name="FireRate" parent="gunSkel" index="1"]
+wait_time = 0.2
+
+[node name="ak47" parent="." instance=ExtResource( 1 )]
+transform = Transform( 1, 0, 0, 0, -1.62921e-07, -1, 0, 1, -1.62921e-07, 21.2544, 0, -0.80371 )
+
+[editable path="gunSkel"]

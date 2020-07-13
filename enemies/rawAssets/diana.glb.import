@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/diana.glb-62951ea2f7de025b15060c81e5a7b48d.scn"
+path="res://.import/diana.glb-0c9f3da3bf2ef4fcad6b80204a1674fa.scn"
 
 [deps]
 
-source_file="res://enemies/diana.glb"
-dest_files=[ "res://.import/diana.glb-62951ea2f7de025b15060c81e5a7b48d.scn" ]
+source_file="res://enemies/rawAssets/diana.glb"
+dest_files=[ "res://.import/diana.glb-0c9f3da3bf2ef4fcad6b80204a1674fa.scn" ]
 
 [params]
 
